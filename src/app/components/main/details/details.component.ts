@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Character } from 'src/app/models/character.model';
 import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { CharactersService } from 'src/app/services/characters.service';
 export class DetailsComponent implements OnInit {
 
   id: number = 1;
-  character: any;
+  character: Character = new Character();
 
   constructor(
     private activatedRoute: ActivatedRoute, 
@@ -22,7 +23,7 @@ export class DetailsComponent implements OnInit {
       this.id = params['id'];
     });
 
-    this.charactersService.getCharacterById(this.id).subscribe(result => {
+    this.charactersService.getById(this.id).subscribe(result => {
       this.character = result;
     });
   }
