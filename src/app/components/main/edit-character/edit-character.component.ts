@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { Character } from 'src/app/models/character.model';
 import { CharactersService } from 'src/app/services/characters.service';
 
@@ -13,7 +14,9 @@ export class EditCharacterComponent implements OnChanges {
 
   characterEdited: Character = new Character();
 
-  constructor(private charactersService: CharactersService) {
+  constructor(
+    private charactersService: CharactersService, 
+    private router: Router) {
   }
 
   ngOnChanges(): void {
@@ -24,5 +27,11 @@ export class EditCharacterComponent implements OnChanges {
   edit() {
     this.charactersService.update(this.characterEdited.id, this.characterEdited).subscribe();
     location.reload();
+  }
+
+  // Borra un personaje a traves de su id
+  delete() {
+    this.charactersService.delete(this.characterEdited.id).subscribe();
+    this.router.navigateByUrl('/characters');
   }
 }
