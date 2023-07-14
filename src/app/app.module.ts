@@ -12,6 +12,7 @@ import { DetailsComponent } from './components/main/details/details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditCharacterComponent } from './components/main/edit-character/edit-character.component';
+import { CreateCharacterComponent } from './components/main/create-character/create-character.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditCharacterComponent } from './components/main/edit-character/edit-ch
     CharactersComponent,
     AboutComponent,
     DetailsComponent,
-    EditCharacterComponent
+    EditCharacterComponent,
+    CreateCharacterComponent
   ],
   imports: [
     BrowserModule,

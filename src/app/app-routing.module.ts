@@ -6,6 +6,7 @@ import { HomeComponent } from './components/main/home/home.component';
 import { CharactersComponent } from './components/main/characters/characters.component';
 import { AboutComponent } from './components/main/about/about.component';
 import { DetailsComponent } from './components/main/details/details.component';
+import { CreateCharacterComponent } from './components/main/create-character/create-character.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'details/:id',
     component: DetailsComponent
+  },
+  {
+    path: 'create',
+    component: CreateCharacterComponent
   }
 ];
 
