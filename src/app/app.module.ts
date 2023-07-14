@@ -11,6 +11,7 @@ import { AboutComponent } from './components/main/about/about.component';
 import { DetailsComponent } from './components/main/details/details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditCharacterComponent } from './components/main/edit-character/edit-character.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CharactersComponent,
     AboutComponent,
-    DetailsComponent
+    DetailsComponent,
+    EditCharacterComponent
   ],
   imports: [
     BrowserModule,
